@@ -1,6 +1,5 @@
 // @ts-ignore
 import express from "express";
-import {mockSendEmail} from "./utils/email";
 import {addUserToCourseQuery} from "./utils/course";
 import {Queue} from "bullmq";
 
