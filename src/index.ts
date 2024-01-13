@@ -7,7 +7,14 @@ import {Queue} from "bullmq";
 const app = express()
 const PORT = process.env.PORT ?? 8000;
 
-const emailQueue = new Queue("email-queue");
+const emailQueue = new Queue("email-queue", {
+    connection: {
+        host: "redis-13c54108-pg-chat-app.a.aivencloud.com",
+        port: 12387,
+        username: "default",
+        password: "AVNS_FN0U-SeHK1cp0v34V8B"
+    },
+});
 
 app.get("/", (req, res) => {
     return res.json({
