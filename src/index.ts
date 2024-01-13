@@ -5,7 +5,7 @@ const app = express()
 const PORT = process.env.PORT ?? 8000;
 
 app.get("/", (req, res) => {
-    return res.join({
+    return res.set({
         status: "success",
         message: "Hello From Express Server"
     });
