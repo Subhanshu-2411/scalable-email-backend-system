@@ -7,7 +7,7 @@ const app = express()
 const PORT = process.env.PORT ?? 8000;
 
 app.get("/", (req, res) => {
-    return res.set({
+    return res.json({
         status: "success",
         message: "Hello From Express Server"
     });
@@ -22,7 +22,7 @@ app.post("/add-user-to-course", async (req, res) => {
         subject: "Congrats on Enrolling in the Course",
         body: "Dear Student, You have been enrolled to XYZ Course",
     });
-    return res.set({
+    return res.json({
         status: "success",
         message: "Enrolled Successfully"
     });
